@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <center><h1>Build a Blog</h1></center>
+
+        <ul style="list-style-type: none">
+            {% for blog in completed_blogs %}
+            <strong><h2><li><a href="./blog?id={{blog.id}}">{{blog.title}}</a></li></h2></strong>
+            <br>
+            <li>{{blog.body}}</li>
+            <hr />
+            {% endfor %}
+        </ul>
+
+
+{% endblock %}
